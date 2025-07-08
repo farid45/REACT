@@ -1,23 +1,40 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Dice from './components/Dice';
 
 function App() {
+  const [diceValues, setDiceValues] = useState([1, 1]);
+  const [isRolling, setIsRolling] = useState(false);
+
+  const rollDice = () => {
+    setIsRolling(true);
+    setTimeout(() => {
+      setDiceValues([
+        Math.floor(Math.random() * 6) + 1,
+        Math.floor(Math.random() * 6) + 1
+      ]);
+      setIsRolling(false);
+    }, 500);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <h1>Игральные кости</h1>
+      
+      <div className="dice-wrapper">
+        <div className="dice-container">
+          <Dice value={diceValues[0]} rolling={isRolling} />
+          <Dice value={diceValues[1]} rolling={isRolling} />
+        </div>
+      </div>
+      
+      <button 
+        onClick={rollDice} 
+        className="roll-button"
+        disabled={isRolling}
+      >
+        {isRolling ? 'Бросаем...' : 'Бросить кости'}
+      </button>
     </div>
   );
 }

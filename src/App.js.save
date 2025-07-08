@@ -1,0 +1,168 @@
+import logo from './logo.svg';
+import './App.css';
+
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+   ddimport React from 'react';
+import './Dice.css';
+
+const MultiDice = ({ value }) => {
+  // Импортируем все изображения из папки
+  const importAll = (r) => r.keys().map(r);
+  const diceImages = importAll(require.context('./dice-faces', false, /\.(png|jpe?g|svg)$/));
+  
+  // Если изображений меньше 27, можно добавить проверку
+  if (diceImages.length !== 27) {
+    console.warn(`Ожидалось 27 изображений, получено ${diceImages.length}`);
+  }
+
+  return (
+    <div className="dice-container">
+      <img 
+        src={diceImages[value]} 
+        alt={`Dice combination ${value + 1}`}
+        className="dice-image"
+      />
+    </div>
+  );
+};
+
+export default MultiDice;import React from 'react';
+import './Dice.css';
+
+const MultiDice = ({ value }) => {
+  // Импортируем все изображения из папки
+  const importAll = (r) => r.keys().map(r);
+  const diceImages = importAll(require.context('./dice-faces', false, /\.(png|jpe?g|svg)$/));
+  
+  // Если изображений меньше 27, можно добавить проверку
+  if (diceImages.length !== 27) {
+    console.warn(`Ожидалось 27 изображений, получено ${diceImages.length}`);
+  }
+
+  return (
+    <div className="dice-container">
+      <img 
+        src={diceImages[value]} 
+        alt={`Dice combination ${value + 1}`}
+        className="dice-image"
+      />
+    </div>
+  );
+};
+
+export default MultiDice;import React from 'react';
+import './Dice.css';
+
+const MultiDice = ({ value }) => {
+  // Импортируем все изображения из папки
+  const importAll = (r) => r.keys().map(r);
+  const diceImages = importAll(require.context('./dice-faces', false, /\.(png|jpe?g|svg)$/));
+  
+  // Если изображений меньше 27, можно добавить проверку
+  if (diceImages.length !== 27) {
+    console.warn(`Ожидалось 27 изображений, получено ${diceImages.length}`);
+  }
+
+  return (
+    <div className="dice-container">
+      <img 
+        src={diceImages[value]} 
+        alt={`Dice combination ${value + 1}`}
+        className="dice-image"
+      />
+    </div>
+  );
+};
+
+export default MultiDice;import React from 'react';
+import './Dice.css';
+
+const MultiDice = ({ value }) => {
+  // Импортируем все изображения из папки
+  const importAll = (r) => r.keys().map(r);
+  const diceImages = importAll(require.context('./dice-faces', false, /\.(png|jpe?g|svg)$/));
+  
+  // Если изображений меньше 27, можно добавить проверку
+  if (diceImages.length !== 27) {
+    console.warn(`Ожидалось 27 изображений, получено ${diceImages.length}`);
+  }
+
+  return (
+    <div className="dice-container">
+      <img 
+        src={diceImages[value]} 
+        alt={`Dice combination ${value + 1}`}
+        className="dice-image"
+      />
+    </div>
+  );
+};
+
+export default MultiDice;import React from 'react';
+import './Dice.css';
+
+const MultiDice = ({ value }) => {
+  // Импортируем все изображения из папки
+  const importAll = (r) => r.keys().map(r);
+  const diceImages = importAll(require.context('./dice-faces', false, /\.(png|jpe?g|svg)$/));
+  
+  // Если изображений меньше 27, можно добавить проверку
+  if (diceImages.length !== 27) {
+    console.warn(`Ожидалось 27 изображений, получено ${diceImages.length}`);
+  }
+
+  return (
+    <div className="dice-container">
+      <img 
+        src={diceImages[value]} 
+        alt={`Dice combination ${value + 1}`}
+        className="dice-image"
+      />
+    </div>
+  );
+};
+
+export default MultiDice;import React from 'react';
+import './Dice.css';
+
+const MultiDice = ({ value }) => {
+  // Импортируем все изображения из папки
+  const importAll = (r) => r.keys().map(r);
+  const diceImages = importAll(require.context('./dice-faces', false, /\.(png|jpe?g|svg)$/));
+  
+  // Если изображений меньше 27, можно добавить проверку
+  if (diceImages.length !== 27) {
+    console.warn(`Ожидалось 27 изображений, получено ${diceImages.length}`);
+  }
+
+  return (
+    <div className="dice-container">
+      <img 
+        src={diceImages[value]} 
+        alt={`Dice combination ${value + 1}`}
+        className="dice-image"
+      />
+    </div>
+  );
+};
+
+export default MultiDice;e="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
+}
+
+export default App;

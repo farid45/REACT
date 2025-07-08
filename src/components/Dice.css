@@ -1,0 +1,25 @@
+.dice {
+  width: 80px;
+  height: 80px;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+@media (min-width: 768px) {
+  .dice {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.dice.rolling {
+  animation: roll 0.8s ease-out;
+}
+
+@keyframes roll {
+  0% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-20px) rotate(90deg); }
+  50% { transform: translateY(0) rotate(180deg); }
+  75% { transform: translateY(-10px) rotate(270deg); }
+  100% { transform: translateY(0) rotate(360deg); }
+}
